@@ -201,7 +201,7 @@ describe('conflictKey / buildExportData (§5.2)', () => {
 
   it('экспорт содержит версию, дату, промпты и папки', () => {
     const data = buildExportData([prompt()], [{ id: 'f', name: 'Dev', parent: null, children: [], order: 0 }]);
-    expect(data.version).toBe('1.1');
+    expect(data.version).toBe('2.0');
     expect(data.prompts).toHaveLength(1);
     expect(data.folders).toHaveLength(1);
     expect(typeof data.exportedAt).toBe('string');
